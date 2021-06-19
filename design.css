@@ -1,0 +1,114 @@
+BODY {
+    background: rgba(0, 0, 0, 0.95);
+}
+
+#displayCount {
+    color: white;
+    text-shadow: 1px 1px 2px white, 0 0 1em #00FFFF, 0 0 0.2em #00FFFF;
+    background: rgba(0, 0, 0, 0.75);
+    width: 10%;
+    font-size: 22px;
+    ;
+}
+
+#time {
+    font-size: 22px;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(120, 153, 155, 0.25);
+    z-index: 2;
+    cursor: default;
+}
+
+#overlay2 {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(120, 153, 155, 0.25);
+    z-index: 2;
+    cursor: default;
+}
+
+#tile11,
+#tile12,
+#tile13,
+#tile14,
+#tile15,
+#tile21,
+#tile22,
+#tile23,
+#tile24,
+#tile25,
+#tile31,
+#tile32,
+#tile33,
+#tile34,
+#tile35,
+#tile41,
+#tile42,
+#tile43,
+#tile44,
+#tile45,
+#tile51,
+#tile52,
+#tile53,
+#tile54 {
+    width: 80px;
+    height: 80px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+#tile55 {
+    width: 80px;
+    height: 80px;
+    border: 3px solid black;
+    cursor: default;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 80px);
+    align-items: center;
+    /* left and right */
+    justify-content: center;
+}
+
+#t11,
+#t12,
+#t13,
+#t21,
+#t22,
+#t23,
+#t31,
+#t32,
+#t33 {
+    top: 1%;
+    left: 35%;
+    width: 35px;
+    height: 35px;
+    border: 1.5px solid black;
+}
+
+.smallgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-gap: 5px;
+    align-items: center;
+    justify-content: center;
+}

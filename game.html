@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="design.css">
+    <script src="function.js"></script>
+</head>
+
+<body onload="on(); off2(); countdef();">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <div id="time" style="color:white; text-shadow: 1px 1px 2px white, 0 0 1em #00FFFF, 0 0 0.2em #00FFFF; background: rgba(0, 0, 0, 0.75); width:50%; ">
+        Time Taken: 0hr 0min 0sec
+    </div>
+    <div id="displayCount" style="color:white; text-shadow: 1px 1px 2px white, 0 0 1em #00FFFF, 0 0 0.2em #00FFFF; background: rgba(0, 0, 0, 0.75); width:50%; font-size:22px; ">
+        Moves : 0
+    </div>
+    <center>
+
+        <div id="overlay">
+
+            <b><H1 style="color:white; font-size:50px; text-shadow: 1px 1px 2px white, 0 0 1em #00FFFF, 0 0 0.2em #00FFFF; background: rgba(0, 0, 0, 0.75); width:50%; ">Puzzle Match 
+</h1> 
+     <button onclick="off(); countdef(); start(); " style='cursor: pointer; color:white; font-size:50px; text-shadow: 1px 1px 2px white, 0 0 1em #00FFFF, 0 0 0.2em #00FFFF; background: rgba(0, 0, 0, 0.75); width:35%; font-size: 50px; padding: 12px 40px;' >Play </button>
+    </b></div>
+        <center>
+            <div id='overlay2'>
+                <h id="message" style="color:white; font-size:50px; text-shadow: 1px 1px 2px white, 0 0 1em #00FFFF, 0 0 0.2em #00FFFF; "> <br>
+                    <br>"KUDOS! YOU WON !"
+
+                    <br>
+                    <br>
+
+
+                    <button onclick="loadgame(); reset();  countdef(); start();" style='cursor: pointer; color:white; font-size:50px; text-shadow: 1px 1px 2px white, 0 0 1em #00FFFF, 0 0 0.2em #00FFFF; background: rgba(0, 0, 0, 0.75); width:35%; font-size: 50px; padding: 12px 35px;'>New Game</button>
+
+            </div>
+            </h>
+            </div>
+            <br>
+            <div class="smallgrid">
+                <div id="t11" style="background-color: #FFD700;"></div>
+                <div id="t12" style="background-color: #7FFF00;"></div>
+                <div id="t13" style="background-color: #8B008B;"></div>
+                <div id="t21" style="background-color: #8B008B;"></div>
+                <div id="t22" style="background-color: #DC143C;"></div>
+                <div id="t23" style="background-color:  #008080;"></div>
+                <div id="t31" style="background-color: #7FFF00;"></div>
+                <div id="t32" style="background-color: #FFD700;"></div>
+                <div id="t33" style="background-color: #00FFFF;"></div>
+            </div><br><br>
+
+            <div class="grid">
+                <div id="tile11" style="background-color: #8B008B;" onclick="clickbox(1,1);"></div>
+                <div id="tile12" style="background-color: #DC143C;" onclick="clickbox(1,2);"></div>
+                <div id="tile13" style="background-color:  #008080;" onclick="clickbox(1,3);"></div>
+                <div id="tile14" style="background-color: #7FFF00;" onclick="clickbox(1,4);"></div>
+                <div id="tile15" style="background-color: #8B008B;" onclick="clickbox(1,5);"></div>
+                <div id="tile21" style="background-color: #FFD700;" onclick="clickbox(2,1);"></div>
+                <div id="tile22" style="background-color: #8B008B;" onclick="clickbox(2,2);"></div>
+                <div id="tile23" style="background-color: #00FFFF;" onclick="clickbox(2,3);"></div>
+                <div id="tile24" style="background-color: #8B008B;" onclick="clickbox(2,4);"></div>
+                <div id="tile25" style="background-color: #7FFF00;" onclick="clickbox(2,5);"></div>
+                <div id="tile31" style="background-color: #00FFFF;" onclick="clickbox(3,1);"></div>
+                <div id="tile32" style="background-color: #7FFF00;" onclick="clickbox(3,2);"></div>
+                <div id="tile33" style="background-color: #FFD700;" onclick="clickbox(3,3);"></div>
+                <div id="tile34" style="background-color: #00FFFF;" onclick="clickbox(3,4);"></div>
+                <div id="tile35" style="background-color: #DC143C;" onclick="clickbox(3,5);"></div>
+                <div id="tile41" style="background-color: #FFD700;" onclick="clickbox(4,1);"></div>
+                <div id="tile42" style="background-color: #8B008B;" onclick="clickbox(4,2);"></div>
+                <div id="tile43" style="background-color: #DC143C;" onclick="clickbox(4,3);"></div>
+                <div id="tile44" style="background-color:  #008080;" onclick="clickbox(4,4);"></div>
+                <div id="tile45" style="background-color: #FFD700;" onclick="clickbox(4,5);"></div>
+                <div id="tile51" style="background-color: #00FFFF;" onclick="clickbox(5,1);"></div>
+                <div id="tile52" style="background-color:  #008080;" onclick="clickbox(5,2);"></div>
+                <div id="tile53" style="background-color: #7FFF00;" onclick="clickbox(5,3);"></div>
+                <div id="tile54" style="background-color: #DC143C;" onclick="clickbox(5,4);"></div>
+                <div id="tile55" style="background-color: grey;" onclick="clickbox(5,5);"></div>
+            </div>
+            <br>
+
+            <button onclick="loadgame();  reset();  countdef(); start();" style="color:white; font-size:50px; text-shadow: 1px 1px 2px white, 0 0 1em #00FFFF, 0 0 0.2em #00FFFF; background: rgba(0, 0, 0, 0.75); width:25%; "> Reset </button>
+            <div id="time" style="padding: 10px"> </div>
+        </center>
+</body>
+
+</html>
